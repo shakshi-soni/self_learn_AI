@@ -85,7 +85,7 @@ The server returns `{ "reply": "..." }`. Prompts ask the model for concise, form
 
 ### Quiz responses
 
-The model is asked for five questions, each with four options, a zero-based answer index, and an explanation. The route requests structured JSON and then uses [`../lib/quiz.ts`](../lib/quiz.ts) to reject malformed data before returning `{ "quiz": [...] }`.
+The model is asked for five questions, each with four options, a zero-based answer index, and an explanation. The route requests structured JSON and then uses [`../lib/quiz.ts`](../lib/quiz.ts) to reject malformed data and remove common Markdown delimiters from question, option, and explanation text before returning `{ "quiz": [...] }`.
 
 The UI calculates the score from model-supplied answer indices. Validation confirms structure and value ranges; it does not independently prove that an answer is correct.
 

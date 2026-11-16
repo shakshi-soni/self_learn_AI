@@ -6,6 +6,14 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+function cleanText(value: string): string {
+  return value
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/__(.+?)__/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .trim();
+}
+
 export function parseQuiz(raw: string): QuizQuestion[] | null {
   try {
     const data: unknown = JSON.parse(raw);
@@ -48,10 +56,10 @@ export function parseQuiz(raw: string): QuizQuestion[] | null {
       }
 
       questions.push({
-        question: item.question.trim(),
-        options: optionValues.map((option) => (option as string).trim()),
+        question: cleanText(item.question),
+        options: optionValues.map((option) => cleanText(option as string)),
         answerIndex: idx,
-        explanation: item.explanation.trim(),
+        explanation: cleanText(item.explanation),
       });
     }
     return questions.length === QUESTION_KEYS.length ? questions : null;

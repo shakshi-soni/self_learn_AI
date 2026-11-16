@@ -30,7 +30,8 @@ const MODE_RULES: Record<ChatMode, string> = {
 Return JSON only, matching the required schema exactly.
 Each question's options object must contain a, b, c, and d, each with a distinct answer.
 answerIndex is the zero-based index in the order a, b, c, d.
-For every question, explanation must briefly explain why the correct option is right.`,
+For every question, explanation must briefly explain why the correct option is right.
+Plain text only, no markdown in question, option, or explanation strings.`,
   chat:
     "Start with a short bold heading that describes the answer. Respond clearly and concisely. Use bullets for steps or when there are multiple useful points; use a short paragraph for a simple answer. Maximum 200 words.",
 };

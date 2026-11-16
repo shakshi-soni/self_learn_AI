@@ -96,7 +96,7 @@ export default function QuizCard({ questions }: { questions: QuizQuestion[] }) {
 
       {answered === questions.length && (
         <p className="text-center text-sm font-semibold text-slate-800">
-          Quiz complete — you scored {score} out of {questions.length}.
+          Quiz complete — Score: {score} / {questions.length}
         </p>
       )}
     </div>
