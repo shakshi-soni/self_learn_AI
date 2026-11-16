@@ -86,8 +86,11 @@ Server (Next.js API route)
 │   └── groq.ts                 # Groq client and model selection
 ├── types/index.ts              # Shared TypeScript types
 ├── docs/
+│   ├── README.md               # Documentation index
+│   ├── ARCHITECTURE.md         # Technical architecture and data flows
 │   ├── PRODUCT.md              # Product thinking and trade-offs
-│   └── bugs.md                 # Bugs hit while building
+│   ├── DEPLOYMENT.md           # Local setup and deployment
+│   └── bugs.md                 # Known limitations and follow-ups
 └── .env.example                # Environment variable template
 ```
 
@@ -183,7 +186,7 @@ Returns `{ "reply": "..." }` for text modes or `{ "quiz": [...] }` for quizzes. 
 4. Answers grounded in lesson text, with a way to flag wrong responses
 5. Unit tests for progress and quiz parsing, plus browser tests for key flows
 
-More product thinking is in [`docs/PRODUCT.md`](./docs/PRODUCT.md).
+Start at the [`docs/`](./docs/README.md) index for the architecture, product brief, deployment guide, and known limitations.
 
 ## Tools used
 
