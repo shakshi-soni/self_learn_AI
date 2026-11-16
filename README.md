@@ -1,6 +1,6 @@
 # LearnSelf AI
 
-**Live demo:** https://self-learn-ai-git-main-shakshi-s-projects2.vercel.app/
+**Live demo:** https://self-learn-ai-sigma.vercel.app/
 
 ---
 
