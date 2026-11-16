@@ -1,0 +1,34 @@
+# LearnMate AI - requirements
+# Node project: the real dependency list lives in package.json (npm manages it).
+# This file documents what to install.
+
+# --- System ---
+node >= 20.9
+npm  >= 10
+git
+
+# --- Installed by create-next-app (do NOT install again) ---
+# npx create-next-app@latest learnmate-ai --typescript --tailwind --eslint --app --import-alias "@/*"
+next
+react
+react-dom
+typescript
+tailwindcss            # v4
+@tailwindcss/postcss
+eslint
+eslint-config-next
+@types/node
+@types/react
+@types/react-dom
+
+# --- Extra packages you must install ---
+# npm i groq-sdk lucide-react
+groq-sdk               # Groq API client (used in lib/groq.ts)
+lucide-react           # icons (components)
+
+# --- Environment (.env.local, never commit) ---
+# GROQ_API_KEY=your_key_here
+
+# --- Scripts ---
+# npm run dev
+# npm run build
