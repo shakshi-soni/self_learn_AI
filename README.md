@@ -187,4 +187,4 @@ More product thinking is in [`docs/PRODUCT.md`](./docs/PRODUCT.md).
 
 ## Tools used
 
-Claude and GitHub Copilot (planning and code assistance), Next.js, React, TypeScript, Tailwind CSS, Groq API, Lucide React, Vercel, GitHub and VS Code.
+Claude and GitHub Copilot, Next.js, React, TypeScript, Tailwind CSS, Groq API, Lucide React, Vercel, GitHub and VS Code.
